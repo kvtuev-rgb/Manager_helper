@@ -1,0 +1,32 @@
+{
+  "name": "manager-helper",
+  "version": "1.0.0",
+  "description": "AI Technical Assistant — настройка приложения",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "set CSC_IDENTITY_AUTO_DISCOVERY=false && electron-builder --win portable",
+    "dist": "electron-builder --win"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "mammoth": "^1.6.0",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.managerhelper.app",
+    "productName": "Manager Helper",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": ["portable", "nsis"],
+      "signAndEditExecutable": false
+    }
+  }
+}

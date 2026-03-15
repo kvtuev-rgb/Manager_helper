@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; media-src 'self' blob:; script-src 'self'; style-src 'self' 'unsafe-inline'" />
+  <title>Manager Helper — Настройка</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Настройка приложения</h1>
+
+    <section class="card">
+      <div class="card-header">
+        <span class="card-icon" aria-hidden="true">🎤</span>
+        <h2>Доступ к микрофону</h2>
+      </div>
+      <p class="card-desc">Нужен для распознавания речи во время звонков.</p>
+      <button type="button" class="btn btn-allow" id="btn-mic">Разрешить</button>
+      <p class="status" id="status-mic" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <span class="card-icon" aria-hidden="true">📄</span>
+        <h2>Файл контекста</h2>
+      </div>
+      <p class="card-desc">Загрузите PDF или документы для базы знаний.</p>
+      <button type="button" class="btn btn-upload" id="btn-file">Загрузить файл контекста</button>
+      <p class="status status-files" id="status-file" aria-live="polite"></p>
+    </section>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
